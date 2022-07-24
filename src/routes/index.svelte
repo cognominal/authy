@@ -3,6 +3,8 @@
     import type { Load } from '$types/index'
 
     export const load: Load = async (args) => {
+      console.log(`session : ${args.session.user}`);
+      
       return {
         props: {
           user: args.session.user,

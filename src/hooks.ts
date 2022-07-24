@@ -1,7 +1,6 @@
 
 import type { Handle, GetSession } from '@sveltejs/kit'
-
-import cookie from 'cookie'
+import cookie from 'cookie' // do I need it or is it already provided by sveltkit ?
 
 export const handle : Handle = async ({ event, resolve }) => {
   const cookies = cookie.parse(event.request.headers.get('cookie') || '')
@@ -19,6 +18,8 @@ export const handle : Handle = async ({ event, resolve }) => {
 
 // the type of the Session object comes from `src/app.d.ts`
 export const getSession: GetSession = (event) => {
+  console.log('GETSESSION --------------- ' + event.locals.username);
+  
 	// if (!event.locals.username) return {}
 
 	return {

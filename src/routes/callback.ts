@@ -17,14 +17,14 @@ async function getUser(accessToken : string )  {
       Authorization: `Bearer ${accessToken}`
     }
   })
-  return getResponseContent(response)
+  return getResponseContent(response, 'getUser')
   
   
 }
 
-async function getResponseContent(r:Response) {
+async function getResponseContent(r:Response, from? : string) {
   const j =  await r.json()
-  console.log('json---' + JSON.stringify(j));
+  console.log(`${from}\n` + JSON.stringify(j));
 
   return j
 
@@ -40,6 +40,8 @@ export const GET : RequestHandler = async (event) => {
   // and will be read by the hooks/handle function
   // after the resolve
   event.locals.username = username.login
+  console.log('user name ' + username.login);
+  
 
   return {
 
@@ -49,14 +51,6 @@ export const GET : RequestHandler = async (event) => {
     }
   }
 }
-
-
-
-
-  // return {
-  //   body: JSON.stringify(accessToken)
-  // }
-
 
 async function getAccessToken(code: string) {
   const response = await  fetch(tokenURL, {
@@ -68,7 +62,7 @@ async function getAccessToken(code: string) {
       code
     })
   })
-  const json = await getResponseContent(response)
+  const json = await getResponseContent(response, 'getAccessToken')
   return json.access_token // get away with .access_token on any. Nice but WTF
 
 }
