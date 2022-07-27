@@ -6,8 +6,7 @@ const clientId = import.meta.env.VITE_CLIENT_ID
 export const GET: RequestHandler = (event) => {
   const sessionId = '1234'
   const location = `${ghAuthURL}?client_id=${clientId}&state=${sessionId}`
-  console.log(`redirect location: ${location}` );
-  
+    
   return {
     status: 302,
     headers: {

@@ -10,8 +10,7 @@ const secret : string =  import.meta.env.VITE_CLIENT_SECRET
 
 
 async function getUser(accessToken : string )  {
-  console.log('accessToken ' + accessToken)
-  const response: Response = await fetch(userURL, {
+    const response: Response = await fetch(userURL, {
     headers: {
       Accept: 'application/json',
       Authorization: `Bearer ${accessToken}`
@@ -24,8 +23,7 @@ async function getUser(accessToken : string )  {
 
 async function getResponseContent(r:Response, from? : string) {
   const j =  await r.json()
-  console.log(`${from}\n` + JSON.stringify(j));
-
+  
   return j
 
 }
@@ -34,14 +32,13 @@ async function getResponseContent(r:Response, from? : string) {
 export const GET : RequestHandler = async (event) => {
   const code = event.url.searchParams.get('code')
   const accessToken = await getAccessToken(<string>code)
-  const username = await getUser(accessToken)
+  const user = await getUser(accessToken)
 
     // this mutates the locals object on the request
   // and will be read by the hooks/handle function
   // after the resolve
-  event.locals.username = username.login
-  console.log('user name ' + username.login);
-  
+  event.locals.user = user.login
+    
 
   return {
 
