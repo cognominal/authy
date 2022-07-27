@@ -4,7 +4,7 @@ Authy uses
 [typescript](https://typescriptlang) instead of js.
 It is a standalone web app that handles login and logout thru github
 by managing a session cookie [[1]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)[[2]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie). Nothing else.
-It is intended as code to be insered in a larger sveltekit app
+It is intended as code to be inserted in a larger sveltekit app
 to provide login service. Maybe will be someday 
 a svelte component.
 
