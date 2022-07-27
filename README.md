@@ -1,14 +1,4 @@
-# This is an adaptation of an existing work
-
-This code is an ongoing adaptation of a
-[demo oauth app](https://blog.hyper.io/sveltekit-authentication/)
-but to a more recent [sveltekit](https://sveltekit) version. 
-
-## See the original work
-
-For the general principles, see the [article](https://blog.hyper.io/sveltekit-authentication/) and watch the [video](https://www.youtube.com/watch?v=D4ZcbudB1n0).
-
-## Short presentation
+## Typescript code to use github oauth in sveltekit
 
 Authy uses 
 [typescript](https://typescriptlang) instead of js.
@@ -25,14 +15,26 @@ by the appropriate values.
     VITE_CLIENT_ID=XXXX
     VITE_CLIENT_SECRET=YYY
 
-## Some context
+
+## This is an adaptation of an existing work
+
+This code is an ongoing adaptation of a
+[demo oauth app](https://blog.hyper.io/sveltekit-authentication/)
+but to a more recent [sveltekit](https://sveltekit) version. 
+
+### See the original work
+
+For the general principles, see the [article](https://blog.hyper.io/sveltekit-authentication/) and watch the [video](https://www.youtube.com/watch?v=D4ZcbudB1n0).
+
+
+### Some context
 
 Sveltekit does scaffolding and provides  services to build reactive sites. 
 It is build on top of vite of [vite](https://vitejs.dev/).
 and uses [svelte](https://svelte.dev/tutorial/basics) components
 
 
-## CAVEATS
+### CAVEATS
 
 This started as an exercise to learn sveltekit and to translate something to typescript but it is useful in its own right even if the code is 
 probably naive and clusmsy. Error handling is missing.
@@ -45,7 +47,7 @@ Patches welcome.
 
 Sveltekit is a fast moving target. So this code will probably bitrot very fast. Use this code at your own risks. You have been warned. 
 
-# incomplete
+## incomplete
 
 Below are incomplete notes that need to be converted into [mermaid](https://mermaid-js.github.io/mermaid/#/) graphs
 
