@@ -16,6 +16,13 @@ by the appropriate values.
     VITE_CLIENT_SECRET=YYY
 
 
+### Some context
+
+It may help if the previous blurb does not make sense to you.
+Sveltekit does scaffolding and provides  services to build reactive sites. 
+It is build on top of vite of [vite](https://vitejs.dev/).
+and uses [svelte](https://svelte.dev/tutorial/basics) components
+
 ## This is an adaptation of an existing work
 
 This code is an ongoing adaptation of a
@@ -27,11 +34,6 @@ but to a more recent [sveltekit](https://sveltekit) version.
 For the general principles, see the [article](https://blog.hyper.io/sveltekit-authentication/) and watch the [video](https://www.youtube.com/watch?v=D4ZcbudB1n0).
 
 
-### Some context
-
-Sveltekit does scaffolding and provides  services to build reactive sites. 
-It is build on top of vite of [vite](https://vitejs.dev/).
-and uses [svelte](https://svelte.dev/tutorial/basics) components
 
 
 ### CAVEATS
